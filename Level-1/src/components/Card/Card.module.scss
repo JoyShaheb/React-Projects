@@ -1,0 +1,20 @@
+$radius: 10px;
+
+.card {
+  border: 2px solid #0b5ed7;
+  border-radius: $radius;
+}
+
+.content {
+  padding: 10px;
+}
+
+.img {
+  border-radius: $radius $radius 0 0;
+}
+
+.badge {
+  top: 10px;
+  right: 20px;
+  font-size: 17px;
+}
