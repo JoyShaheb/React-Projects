@@ -6,10 +6,17 @@ const Card = ({ results }) => {
 
   if (results) {
     abc = results.map((x) => {
-      let { id, image, name, status, location } = x;
+      let { id, image, name, status, location, type } = x;
+      console.log(type);
+
       return (
-        <div key={id} className="col-4 mb-4 position-relative">
-          <div className={styles.card}>
+        <div
+          key={id}
+          className="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 position-relative"
+        >
+          <div
+            className={`${styles.card} d-flex flex-column justify-content-center`}
+          >
             <img className={`${styles.img} img-fluid`} src={image} alt="" />
             <div className={`${styles.content}`}>
               <div className="fs-5 fw-bold mb-4">{name}</div>

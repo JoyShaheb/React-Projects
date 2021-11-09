@@ -7,7 +7,7 @@ const Search = ({ setSearch, updatePageNumber }) => {
   };
   return (
     <form
-      className={`${styles.search} d-flex justify-content-center gap-4 mb-5`}
+      className={`${styles.search} d-flex flex-sm-row flex-column align-items-center justify-content-center gap-4 mb-5`}
     >
       <input
         onChange={(e) => {
