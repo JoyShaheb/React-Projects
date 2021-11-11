@@ -8,22 +8,7 @@ const Episodes = () => {
   let { air_date, episode, name } = info;
   let [id, setID] = useState(1);
 
-  console.log(info);
   let api = `https://rickandmortyapi.com/api/episode/${id}`;
-  // useEffect(() => {
-  //   (async function () {
-  //     let step_1 = await fetch(api)
-  //       .then((res) => res.json())
-  //       .then((res) => res.characters);
-
-  //     let step_2 = await Promise.all(
-  //       step_1.map((character) => {
-  //         return fetch(character).then((res) => res.json());
-  //       })
-  //     );
-  //     setResults(step_2);
-  //   })();
-  // }, [api]);
 
   useEffect(() => {
     (async function () {
@@ -57,7 +42,7 @@ const Episodes = () => {
         </div>
         <div className="col-lg-8 col-12">
           <div className="row">
-            <Card results={results} />
+            <Card page="/episodes/" results={results} />
           </div>
         </div>
       </div>

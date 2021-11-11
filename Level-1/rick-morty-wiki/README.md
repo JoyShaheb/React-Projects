@@ -13,5 +13,7 @@ npm install sass
 
 npm install react-paginate --save
 
+npm install react-router-dom
+
 npm start
 ```

@@ -6,10 +6,8 @@ const Location = () => {
   let [results, setResults] = React.useState([]);
   let [info, setInfo] = useState([]);
   let { dimension, type, name } = info;
-  console.log(info);
   let [number, setNumber] = useState(1);
 
-  console.log(info);
   let api = `https://rickandmortyapi.com/api/location/${number}`;
 
   useEffect(() => {
@@ -48,7 +46,7 @@ const Location = () => {
         </div>
         <div className="col-lg-8 col-12">
           <div className="row">
-            <Card results={results} />
+            <Card page="/location/" results={results} />
           </div>
         </div>
       </div>

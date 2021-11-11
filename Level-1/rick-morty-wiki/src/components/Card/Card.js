@@ -1,16 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Card.module.scss";
+import CardDetails from "./CardDetails";
 
-const Card = ({ results }) => {
+const Card = ({ page, results }) => {
   let abc;
 
   if (results) {
     abc = results.map((x) => {
-      let { id, image, name, status, location, type } = x;
-      console.log(type);
+      let { id, image, name, status, location } = x;
 
       return (
-        <div
+        <Link
+          to={`${page}${id}`}
           key={id}
           className="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 position-relative"
         >
@@ -54,7 +56,7 @@ const Card = ({ results }) => {
               );
             }
           })()}
-        </div>
+        </Link>
       );
     });
   } else {
