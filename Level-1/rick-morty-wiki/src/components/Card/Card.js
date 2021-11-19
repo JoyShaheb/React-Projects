@@ -4,10 +4,10 @@ import styles from "./Card.module.scss";
 import CardDetails from "./CardDetails";
 
 const Card = ({ page, results }) => {
-  let abc;
+  let display;
 
   if (results) {
-    abc = results.map((x) => {
+    display = results.map((x) => {
       let { id, image, name, status, location } = x;
 
       return (
@@ -61,10 +61,10 @@ const Card = ({ page, results }) => {
       );
     });
   } else {
-    abc = "No Characters Found :/";
+    display = "No Characters Found :/";
   }
 
-  return <>{abc}</>;
+  return <>{display}</>;
 };
 
 export default Card;
